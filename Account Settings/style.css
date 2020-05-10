@@ -1,0 +1,95 @@
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-family: 'Source Sans Pro';
+    background-color: rgb(245, 245, 245);
+    padding-bottom: 30px;
+
+}
+
+.contanier{
+
+  padding-bottom: 35px;
+  /*border: red;*/
+  bottom: 40px; 
+}
+
+.title{
+  text-align: center;
+}
+
+
+.part1 {
+	height: 40%;
+  width: 90%;
+ /* border: 5px solid red;*/
+  padding-left: 5%;
+
+}
+
+.part2{
+  height: 40%;
+  width: 90%;
+  /*border: 5px solid red;*/
+  padding-left: 5%;
+  padding-bottom: 30px;
+
+}
+
+.pq1{
+  display: inline-block;
+  height: 30%;
+  width: 30%;
+ /*border: 3px solid green;*/
+  padding-left: 15px;
+  padding-bottom: 25px;
+
+}
+
+input[type=text], input[type=password], 
+input[type=number], input[type=email], select{
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+
+.button {
+
+  display: inline-block;
+  padding: 10px 55px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  text-align: center;
+  float: right;
+
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#c{
+
+
+
+
+}
