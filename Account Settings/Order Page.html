@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+</style>
+
+</head>
+<body>
+
+<h2>Order Status</h2>
+<p>View current and past orders</p>
+
+<table style="width:100%">
+ 
+  <tr>
+    <th>Date</th>
+    <th>Order Number</th>
+    <th>Status</th>
+    <th>Total Price</th>
+  </tr>
+  <tr>
+    <td>05/1/2020</td>
+    <td>12345678</td>
+    <td>Sent</td>
+    <td>$23.26</td>
+  </tr>
+  <tr>
+   <td>03/12/2020</td>
+    <td>23459827</td>
+    <td>Delivered</td>
+    <td>$100.34.26</td>
+  </tr>
+</table>
+
+<h2>Return Status</h2>
+<p>View current and past returns</p>
+<form action="/action_page.php">
+  <label for="fname">Search Returns</label><br>
+  <input type="number" id="order number" name="order" value="Enter order number"><br>
+</form> 
+<p>
+<label for="date">Purchase Date:</label>
+
+<select id="date">
+  <option value="30">30 days</option>
+  <option value="90">90 days</option>
+  <option value="120">120 days</option>
+</select>
+</p>
+<table style="width:100%">
+  <tr>
+    <th>Product Name</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Status</th>
+  </tr>
+  <tr>
+    <td>Women's Brushed Tech Stretch Crop Jogger Pant</td>
+    <td>1</td>
+    <td>$18.59</td>
+    <td>Refunded</td>
+  </tr>
+  <tr>
+   <td>Women's Stretch Wide Lapel Flyaway Jacket</td>
+    <td>1</td>
+    <td>$80.56</td>
+    <td>Pending</td>
+  </tr>
+</table>
+
+<h2>Order History</h2>
+<p>View details of current and past purchases </p>
+<form action="/action_page.php">
+  <label for="order history">Search Orders</label><br>
+  <input type="number" id="order number" name="order" value="Enter order number"><br>
+</form> 
+<p>
+<label for="date">Purchase Date:</label>
+
+<select id="order history">
+  <option value="30">30 days</option>
+  <option value="90">90 days</option>
+  <option value="120">120 days</option>
+</select>
+</p>
+<p> Order# 34829485 </p>
+
+<table style="width:100%">
+  <tr>
+    <th>Product Name</th>
+    <th>Product Description</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Total Price</th>
+  </tr>
+  <tr>
+    <td>Beats Solo3 Wireless On-Ear Headphones</td>
+    <td>Apple W1 Headphone Chip, Class 1 Bluetooth, 40 Hours of Listening Time - Black (Latest Model)</td>
+    <td>2</td>
+    <td>$179.00</td>
+    <td>$358.00</td>
+  </tr>
+  <tr>
+    <td>Men's Casual Shirts </td>
+    <td>Summer Short Sleeve Turn-Down Slim Fit Button with Pocket Tops Blouse</td>
+    <td>1</td>
+    <td>$24.89</td>
+    <td>$24.89</td>
+  </tr>
+</table>
+<p> Order# 34829485 </p>
+
+<table style="width:100%">
+  <tr>
+    <th>Product Name</th>
+    <th>Product Description</th>
+    <th>Quantity</th>
+    <th>Price</th>
+    <th>Total Price</th>
+  </tr>
+  <tr>
+    <td>Men Streetwear Hiphop Punk Harem Pants </td>
+    <td>Jogger Sport Sweatpants Elastic Waist Slim Fit Cargo Trousers</td>
+    <td>1</td>
+    <td>$19.89</td>
+    <td>$19.89</td>
+  </tr>
+  
+</table>
+
+
+</body>
+</html>
