@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Sign up Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<img src="http://via.placeholder.com/300x250">
+<div class="signup-form">
+
+    <h1> Create your account</h1>
+    <form action="/action_page.php">
+
+        <input type="text" class="input-box" placeholder="Your name" required>
+        <input type="text" class="input-box" placeholder="E-mail" required>
+        <input type="password" class="input-box" id="userInput" required autocomplete="off" minlength="6"
+               placeholder="Password"><br>
+        <label> Passwords must be at least 6 characters. </label> <br>
+        <br>
+        <input type="checkbox" onclick="myFunction()">Show Password
+        <p><span><input type="checkbox"></span> By checking this box, you would agree to the
+            <a href="#"> Conditions of Use</a> and <a href="#"> Privacy Notice</a>.</p>
+        <button class="button" >Create your account</button>
+        <hr>
+        <p>Already have an account? <a href="#"> Sign in</a></p>
+        <!--<button type="button" class="signin-btn">Sign in</button> -->
+
+    <script>
+function myFunction() {
+  var x = document.getElementById("userInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+    </script>
+
+</div>
+</body>
+</html>
