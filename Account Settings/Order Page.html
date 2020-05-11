@@ -1,141 +1,154 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<style>
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+  <title>Orders</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+.form-inline {  
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
-th, td {
-  padding: 5px;
-  text-align: left;
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
 </style>
-
 </head>
 <body>
 
-<h2>Order Status</h2>
-<p>View current and past orders</p>
-
-<table style="width:100%">
- 
-  <tr>
-    <th>Date</th>
-    <th>Order Number</th>
-    <th>Status</th>
-    <th>Total Price</th>
-  </tr>
-  <tr>
-    <td>05/1/2020</td>
-    <td>12345678</td>
-    <td>Sent</td>
-    <td>$23.26</td>
-  </tr>
-  <tr>
-   <td>03/12/2020</td>
-    <td>23459827</td>
-    <td>Delivered</td>
-    <td>$100.34</td>
-  </tr>
-</table>
-
-<h2>Return Status</h2>
-<p>View current and past returns</p>
-<form action="/action_page.php">
-  <label for="fname">Search Returns</label><br>
-  <input type="number" id="order number" name="order" value="Enter order number"><br>
-</form> 
-<p>
-<label for="date">Purchase Date:</label>
-
-<select id="date">
-  <option value="30">30 days</option>
-  <option value="90">90 days</option>
-  <option value="120">120 days</option>
-</select>
-</p>
-<table style="width:100%">
-  <tr>
-    <th>Product Name</th>
-    <th>Quantity</th>
-    <th>Price</th>
-    <th>Status</th>
-  </tr>
-  <tr>
-    <td>Women's Brushed Tech Stretch Crop Jogger Pant</td>
-    <td>1</td>
-    <td>$18.59</td>
-    <td>Refunded</td>
-  </tr>
-  <tr>
-   <td>Women's Stretch Wide Lapel Flyaway Jacket</td>
-    <td>1</td>
-    <td>$80.56</td>
-    <td>Pending</td>
-  </tr>
-</table>
-
-<h2>Order History</h2>
-<p>View details of current and past purchases </p>
-<form action="/action_page.php">
-  <label for="order history">Search Orders</label><br>
-  <input type="number" id="order number" name="order" value="Enter order number"><br>
-</form> 
-<p>
-<label for="date">Purchase Date:</label>
-
-<select id="order history">
-  <option value="30">30 days</option>
-  <option value="90">90 days</option>
-  <option value="120">120 days</option>
-</select>
-</p>
-<p> Order# 34829485 </p>
-
-<table style="width:100%">
-  <tr>
-    <th>Product Name</th>
-    <th>Product Description</th>
-    <th>Quantity</th>
-    <th>Price</th>
-    <th>Total Price</th>
-  </tr>
-  <tr>
-    <td>Beats Solo3 Wireless On-Ear Headphones</td>
-    <td>Apple W1 Headphone Chip, Class 1 Bluetooth, 40 Hours of Listening Time - Black (Latest Model)</td>
-    <td>2</td>
-    <td>$179.00</td>
-    <td>$358.00</td>
-  </tr>
-  <tr>
-    <td>Men's Casual Shirts </td>
-    <td>Summer Short Sleeve Turn-Down Slim Fit Button with Pocket Tops Blouse</td>
-    <td>1</td>
-    <td>$24.89</td>
-    <td>$24.89</td>
-  </tr>
-</table>
-<p> Order# 34829485 </p>
-
-<table style="width:100%">
-  <tr>
-    <th>Product Name</th>
-    <th>Product Description</th>
-    <th>Quantity</th>
-    <th>Price</th>
-    <th>Total Price</th>
-  </tr>
-  <tr>
-    <td>Men Streetwear Hiphop Punk Harem Pants </td>
-    <td>Jogger Sport Sweatpants Elastic Waist Slim Fit Cargo Trousers</td>
-    <td>1</td>
-    <td>$19.89</td>
-    <td>$19.89</td>
-  </tr>
+<div class="container">
+  <h2>Order Status</h2>
+  <p>View current and past orders</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Order Number</th>
+        <th>Status</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>5/2/2020</td>
+        <td>82347653</td>
+        <td>Sent</td>
+        <td>$23.56</td>
+      </tr>
+      <tr>
+       <td>4/26/2020</td>
+        <td>29384572</td>
+        <td>Delivered</td>
+        <td>$129.45</td>
+      </tr>
+    </tbody>
+  </table>
   
-</table>
-
+  <h2>Order History</h2>
+  <p>View details of current and past purchases </p>
+  <form class="form-inline" action="/action_page.php">
+  	<label for="order">Search Orders</label>
+  	<input type="number" id="order" placeholder="Enter Order Number" name="order">
+  	<label for="date">Purchase Date</label>
+  	<select id="order history">
+  		<option value="30">30 days</option>
+  		<option value="90">90 days</option>
+  		<option value="120">120 days</option>
+  	</select>
+  	<button type="submit">Submit</button>
+  </form>
+  <br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Product Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <p> Order# 34829485 </p>
+    <tbody>
+      <tr>
+        <td>Beats Solo3 Wireless On-Ear Headphones</td>
+        <td>Apple W1 Headphone Chip, Class 1 Bluetooth, 40 Hours of Listening Time - Black (Latest Model)</td>
+        <td>2</td>
+        <td>$179.00</td>
+        <td>$358.00</td>
+      </tr>
+      <tr>
+       <td>Men's Casual Shirts</td>
+        <td>Summer Short Sleeve Turn-Down Slim Fit Button with Pocket Tops Blouse</td>
+        <td>1</td>
+        <td>$23.45</td>
+        <td>$23.45</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Product Name</th>
+        <th>Product Description</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Total Price</th>
+      </tr>
+    </thead>
+    <br>
+    <p> Order# 94872638 </p>
+    <tbody>
+      <tr>
+        <td>Men Streetwear Hiphop Punk Harem Pants</td>
+        <td>Jogger Sport Sweatpants Elastic Waist Slim Fit Cargo Trousers</td>
+        <td>1</td>
+        <td>$19.86</td>
+        <td>$19.86</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 </body>
 </html>
