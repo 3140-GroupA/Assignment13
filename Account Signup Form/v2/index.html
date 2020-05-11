@@ -12,13 +12,13 @@
     <form action="/action_page.php">
 
         <input type="text" class="input-box" placeholder="Your name" required>
-        <input type="text" class="input-box" placeholder="E-mail" required>
+        <input type="email" class="input-box" placeholder="E-mail" required >
         <input type="password" class="input-box" id="userInput" required autocomplete="off" minlength="6"
                placeholder="Password"><br>
         <label> Passwords must be at least 6 characters. </label> <br>
         <br>
         <input type="checkbox" onclick="myFunction()">Show Password
-        <p><span><input type="checkbox"></span> By checking this box, you would agree to the
+        <p><span><input type="checkbox" required></span> By checking this box, you would agree to the
             <a href="#"> Conditions of Use</a> and <a href="#"> Privacy Notice</a>.</p>
         <button class="button" >Create your account</button>
         <hr>
@@ -37,6 +37,7 @@ function myFunction() {
 
     </script>
 
+    </form>
 </div>
 </body>
 </html>
