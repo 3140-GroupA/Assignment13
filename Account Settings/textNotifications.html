@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Text Notifications</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-3">
+  <h2>Text Notifications</h2>
+  <p>Manage your preferences for receiving text notifications </p>
+  <form action="/action_page.php">
+  	<label for="fname">Mobile Number:</label><br>
+  	<input type="number" id="mobile" name="mobile"><br><br>
+  </form>
+  <form action="/action_page.php">
+    <div class="custom-control custom-checkbox mb-3">
+      <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+      <label class="custom-control-label" for="customCheck">Deals</label>
+      <p>Catch our hottest deals.</p>
+      
+      <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+      <label class="custom-control-label" for="customCheck">Auto-Notify Alert</label>
+      <p>Receive updates when the products you are interested in becomes available for purchase.</p>
+	  
+      <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+      <label class="custom-control-label" for="customCheck">Price Alert</label>
+      <p>Learn when an item's price drops to a specified price.</p>
+      
+      <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+      <label class="custom-control-label" for="customCheck">Order / Delivery Notification</label>
+      <p>Be notified with order status update and when your packages are shipped and delivered.</p>
+      
+      <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+      <label class="custom-control-label" for="customCheck">We will send a SMS message to verify your phone number. Msg & Data Rates May Apply. Charges may 	  occur for messages. Message frequency varies by account. Check with your carrier for more info</label>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+</body>
+</html>
