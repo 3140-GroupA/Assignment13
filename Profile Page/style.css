@@ -1,0 +1,71 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+.topBack {
+  background-color: #b3b3b3;
+  height: 200px;
+  min-height: 60vh;
+}
+.heading {
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  text-align: left;
+  margin-left: 70px;
+  margin-top: 120px;
+}
+.userImage {
+  height: 200px;
+  width: 200px;
+  object-fit: left;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  margin-top: 200px;
+}
+#button {
+  background-color: #f7ce39;
+  border: 1px solid white;
+  color: black;
+  margin-left: 100px;
+  margin-right: 20px;
+  float: right;
+}
+.rightBox {
+  display: table-cell;
+  align-items: right;
+  justify-content: right;
+}
+.leftBox {
+  display: table-cell;
+  background-color: #dedddc;
+  height: 200px;
+  width: 300px;
+  align-items: left;
+  justify-content: left;
+}
+.stats {
+  display: flex;
+}
+.stats .col-4 {
+  width: 5rem;
+  text-align: center;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
