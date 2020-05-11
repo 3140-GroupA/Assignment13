@@ -54,8 +54,6 @@ outline: none;
 cursor: pointer;
 }
 
-
-
 .signin-btn
 {
 background-color: #FF9900;
@@ -63,7 +61,7 @@ background-color: #FF9900;
 
 a
 {
-background-color: #f8f2ec;
+text-decoration: none;
 }
 
 hr
