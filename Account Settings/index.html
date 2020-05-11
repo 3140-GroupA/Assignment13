@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Setting Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="contanier">
+      <div class="title">
+        <h1>Account Settings</h1>
+      </div>
+      <div class="part1">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Edit user profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Edit privacy settings</a>
+          </li>
+        </ul>
+        <br />
+        <p><strong>Personal Information</strong></p>
+        <hr />
+
+        <div class="container">
+          <div class=".col-xs-4 .col-md-offset-2">
+            <div class="panel panel-default panel-info Profile">
+              <div class="panel-heading">My Profile</div>
+              <div class="alert alert-success">
+                <a
+                  href="#"
+                  class="close"
+                  data-dismiss="alert"
+                  aria-label="close"
+                  >&times;</a
+                >
+                <strong>Success!</strong> Profile successfully saved
+              </div>
+              <div class="alert alert-warning">
+                <a
+                  href="#"
+                  class="close"
+                  data-dismiss="alert"
+                  aria-label="close"
+                  >&times;</a
+                >
+                <strong>Oops!</strong> Profile not saved. Try later.
+              </div>
+              <div class="panel-body">
+                <div class="form-horizontal">
+                  <form>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">First Name</label>
+                      <div class="col-sm-4">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="firstName"
+                          placeholder="First Name"
+                          ng-model="me.firstName"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Last Name</label>
+                      <div class="col-sm-4">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="lastName"
+                          placeholder="Last Name"
+                          ng-model="me.lastName"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Email</label>
+                      <div class="col-sm-4">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="email"
+                          placeholder="Email"
+                          ng-model="me.email"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Phone</label>
+                      <div class="col-sm-4">
+                        <input
+                          type="text"
+                          id="textinput"
+                          maxlength="12"
+                          placeholder="xxx-xxx-xxxx"
+                          ng-model="me.email"
+                          onkeydown="return onlyNumbers(event)"
+                          onkeyup="return myKeyPress(event)"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Old Password</label>
+                      <div class="col-sm-4">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="password"
+                          placeholder="password"
+                          ng-model="me.email"
+                          minlength="10"
+                          maxlength="20"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">New Password</label>
+                      <div class="col-sm-4">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="newpassword"
+                          placeholder="password"
+                          ng-model="me.email"
+                          minlength="10"
+                          maxlength="20"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"
+                        >Re Enter Password</label
+                      >
+                      <div class="col-sm-4">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="newpassword"
+                          placeholder="password"
+                          ng-model="me.email"
+                          minlength="10"
+                          maxlength="20"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label"
+                        >Mailing Address</label
+                      >
+                      <div class="col-sm-4">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="Mailing Address"
+                          placeholder="Address"
+                          ng-model="me.email"
+                          maxlength="45"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">City</label>
+                      <div class="col-sm-4">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="startDate"
+                          placeholder="Start Date"
+                          ng-model="me.email"
+                          maxlength="20"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-4">
+                        <p>State</p>
+                        <select>
+                          <option value="AL">Alabama</option>
+                          <option value="AK">Alaska</option>
+                          <option value="AZ">Arizona</option>
+                          <option value="AR">Arkansas</option>
+                          <option value="CA">California</option>
+                          <option value="CO">Colorado</option>
+                          <option value="CT">Connecticut</option>
+                          <option value="DE">Delaware</option>
+                          <option value="DC">District Of Columbia</option>
+                          <option value="FL">Florida</option>
+                          <option value="GA">Georgia</option>
+                          <option value="HI">Hawaii</option>
+                          <option value="ID">Idaho</option>
+                          <option value="IL">Illinois</option>
+                          <option value="IN">Indiana</option>
+                          <option value="IA">Iowa</option>
+                          <option value="KS">Kansas</option>
+                          <option value="KY">Kentucky</option>
+                          <option value="LA">Louisiana</option>
+                          <option value="ME">Maine</option>
+                          <option value="MD">Maryland</option>
+                          <option value="MA">Massachusetts</option>
+                          <option value="MI">Michigan</option>
+                          <option value="MN">Minnesota</option>
+                          <option value="MS">Mississippi</option>
+                          <option value="MO">Missouri</option>
+                          <option value="MT">Montana</option>
+                          <option value="NE">Nebraska</option>
+                          <option value="NV">Nevada</option>
+                          <option value="NH">New Hampshire</option>
+                          <option value="NJ">New Jersey</option>
+                          <option value="NM">New Mexico</option>
+                          <option value="NY">New York</option>
+                          <option value="NC">North Carolina</option>
+                          <option value="ND">North Dakota</option>
+                          <option value="OH">Ohio</option>
+                          <option value="OK">Oklahoma</option>
+                          <option value="OR">Oregon</option>
+                          <option value="PA">Pennsylvania</option>
+                          <option value="RI">Rhode Island</option>
+                          <option value="SC">South Carolina</option>
+                          <option value="SD">South Dakota</option>
+                          <option value="TN">Tennessee</option>
+                          <option value="TX">Texas</option>
+                          <option value="UT">Utah</option>
+                          <option value="VT">Vermont</option>
+                          <option value="VA">Virginia</option>
+                          <option value="WA">Washington</option>
+                          <option value="WV">West Virginia</option>
+                          <option value="WI">Wisconsin</option>
+                          <option value="WY">Wyoming</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Zip code</label>
+                      <div class="col-sm-4">
+                        <input
+                          class="form-control"
+                          type="text"
+                          name="title"
+                          placeholder="Title"
+                          ng-model="me.email"
+                        />
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-sm-offset-2 col-sm-10">
+                        <button class="btn btn-primary" ng-click="updateMe()">
+                          Update
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="part2">
+        <p><strong>Payment Information</strong></p>
+        <hr />
+        <div class="pq1">
+          <p>Name on The Card:</p>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            minlength="20"
+            maxlength="20"
+            required
+          />
+          <p>Credit Card Number:</p>
+          <input
+            type="number"
+            name="card"
+            id="card"
+            minlength="12"
+            maxlength="12"
+            required
+          />
+          <p>Exp Date:</p>
+          <input
+            type="Number"
+            name="phone"
+            id="phone"
+            minlength="9"
+            maxlength="11"
+            required
+          />
+          <p>CCV:</p>
+          <input type="email" name="email" id="email" maxlength="40" required />
+        </div>
+        <div class="pq1">
+          <p>Mailing Address</p>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            maxlength="45"
+            required
+          />
+          <p>City</p>
+          <input type="text" name="city" id="city" maxlength="20" required />
+          <p>State</p>
+          <select>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+          <p>Zip code</p>
+          <input
+            type="Number"
+            name="zip"
+            id="zip"
+            minlength="5"
+            maxlength="5"
+            required
+          />
+        </div>
+        <div class="pq1">
+          <p>Email Address</p>
+          <input
+            type="email"
+            name="email"
+            id="email2"
+            maxlength="45"
+            required
+          />
+          <p>Re-enter the Email Address</p>
+          <input
+            type="email"
+            name="email"
+            id="email3"
+            maxlength="45"
+            required
+          />
+        </div>
+      </div>
+      <div class="form-group" style="float:right;">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button class="btn btn-primary" ng-click="updateMe()">
+            Cancel
+          </button>
+        </div>
+      </div>
+      <div class="form-group" style="float:right;">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button class="btn btn-primary" ng-click="updateMe()">
+            Submit
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
